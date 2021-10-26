@@ -6,15 +6,16 @@ app.use(express.urlencoded({extended:true}))
 
 
 var ds = [
-        {name: 'Yasuo', picURL : 'https://cdn-onshop.cdn.vccloud.vn/images/figroom/w_2000,h_2000/yasuo-a3.jpg'},
-        {name: 'Doraemon', picURL : 'https://backstage.vn/wp-content/uploads/2019/02/271aa6497c884cc38a2ce23b91adc3a4-750x375.jpg'},
-        {name: 'Xe cuu hoa', picURL :'https://docuabeyeu.com/wp-content/uploads/2019/04/xe-cuu-hoa-1-cho-ngoi-2.png?fbclid=IwAR0PUzuy8YevU1ZNrXLJKadMl-VQW3jPHCcpYpTukpyjTMyeZcHfRT4G1bA'}
+        {name: 'Zoro', picURL : 'https://vn-live-01.slatic.net/p/d697be00768c8a388df5fb59aaa3cf72.jpg',price :4000},
+        {name: 'Doraemon', picURL : 'https://cf.shopee.vn/file/4295db33ca4b40492af3fc5cf7c23bc9',price: 3200},
+        {name: 'Xe cuu hoa', picURL :'https://docuabeyeu.com/wp-content/uploads/2019/04/xe-cuu-hoa-1-cho-ngoi-2.png?fbclid=IwAR0PUzuy8YevU1ZNrXLJKadMl-VQW3jPHCcpYpTukpyjTMyeZcHfRT4G1bA',price: 2500}
     ]
 
 app.post('/save',(req,res)=>{
     var name = req.body.txtName
     var picURL = req.body.txtPictureURL
-    ds.push({name:name,picURL:picURL})
+    var price = req.body.txtPrice
+    ds.push({name:name,picURL:picURL,price:price})
     res.redirect('/')
 
 }) 

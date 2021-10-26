@@ -7,17 +7,20 @@
     <title>Index page</title>
 </head>
 <body>
-    <center><h1>Toy Store Online</h1></center>
+    <center><h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:tomato;">Toy Store Online</h1></center>
     <center><h2>Welcome {{name}}</h2></center>
    <center><table border="1" width="40%">
        <tr>
            <td>Name</td>
            <td>Picture</td>
+           <td>Price</td>
        </tr>
        {{#each ds}}
        <tr>
            <td>{{name}}</td>
-           <td><img src="{{picURL}}" width="150" height="100"/> </td>         
+           <td><img src="{{picURL}}" width="150" height="100"/> </td> 
+           <td>{{price}}</td>        
        </tr>
        {{/each}}
    </table></center>
